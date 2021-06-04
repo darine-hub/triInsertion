@@ -1,0 +1,36 @@
+PROCEDURE triInsertion(tab:ARRAY_OF INTEGER[n],n:INTEGER)
+VAR
+ i,j,tmp:INTEGER;
+BEGIN
+    FOR i FROM 1 TO n-1 STEP step  DO
+        tmp= tab[i]
+        j=j-1
+
+     WHILE (j>=0 AND tab[j]>tmp) DO
+  
+       t[j+1]=t[j]
+       j=j-1
+        
+     END_WHILE  
+     t[j+1] =tmp
+    END_FOR
+END
+
+ALGORITHM triTable 
+VAR
+    tab: ARRAY_OF INTEGER[n];
+    n:INTEGER;
+BEGIN
+    write("donner un longueur n a votre choix pour votre tableau ")
+    Read(n)
+    FOR i FROM 0 TO n-1 STEP step  DO
+        write("donner un element a votre choix pour votre tableau")
+        Read(tab[i])
+    END_FOR
+
+        triInsertion(tab,n)
+
+
+
+
+END
